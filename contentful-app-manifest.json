@@ -1,0 +1,29 @@
+{
+  "functions": [
+    {
+      "id": "gameMetadataSyncActionHandler",
+      "name": "Game Metadata Sync Handler ✨",
+      "description": "Automatically updates gameV2 entry metadata from target 3rd Party Provider API.",
+      "entryFile": "functions/index.ts",
+      "path": "functions/index.js",
+      "allowNetworks": [
+        "api.contentful.com",
+        "game-service.ballys.whitehatgaming.com",
+        "game-service.ballys-can.whitehatgaming.com"
+      ],
+      "accepts": [
+        "appaction.call"
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "id": "gameMetadataSyncAction",
+      "name": "Game Metadata Sync Action",
+      "type": "function-invocation",
+      "functionId": "gameMetadataSyncActionHandler",
+      "category": "Custom",
+      "parameters": []
+    }
+  ]
+}
